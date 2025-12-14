@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Lazy Boy ・ Socials</title>
+<link rel="stylesheet" href="style/Décoration.css">
+</head>
+<body>
+
+<div class="gate" id="gate">
+    <div class="envelope">
+        <div class="envelope-icon">✉️</div>
+        <p>enter the code (1234)</p>
+        <input type="password" id="codeInput" placeholder="••••">
+        <button onclick="checkCode()">enter</button>
+    </div>
+</div>
+
+<div class="wrapper">
+<div class="page">
+
+
+<div class="quote">
+“ just a lazy boy on the internet ”
+</div>
+
+
+<div class="banner">
+<img src="images/téléchargement.jpg" alt="banner">
+</div>
+
+
+<div class="profile">
+<img src="images/nagii.png" alt="avatar">
+</div>
+
+
+<h1>lazy boy</h1>
+<p class="subtitle">my social links</p>
+
+
+<p class="credit">✿ made by lazy boy</p>
+
+
+<div class="buttons">
+<a href="https://www.tiktok.com/@welc0me.my.world" target="_blank">🎵 tiktok</a>
+<a href="https://discord.gg/43NE9tu8" target="_blank">💬 discord</a>
+</div>
+
+
+<div class="footer">
+↑ find me here ↑
+<div class="socials">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+function checkCode() {
+    const input = document.getElementById("codeInput");
+    const envelope = document.querySelector(".envelope");
+    const gate = document.getElementById("gate");
+
+    if (input.value === "1234") {
+        gate.style.animation = "fadeOut 0.6s ease forwards";
+        setTimeout(() => {
+            gate.style.display = "none";
+        }, 600);
+    } else {
+        envelope.classList.add("wrong");
+        setTimeout(() => envelope.classList.remove("wrong"), 300);
+        input.value = "";
+    }
+}
+</script>
+
+</body>
+</html>
